@@ -1,0 +1,5 @@
+bhai i = 0
+jab tak i < 5 tab
+    bola i
+    bhai i = i + 1
+bas kar

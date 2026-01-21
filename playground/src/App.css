@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2d2d2d;
+  border-bottom: 2px solid #ff9933; /* Saffron */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff9933; /* Saffron */
+}
+
+.run-btn {
+  background-color: #ff9933;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.run-btn:disabled {
+  background-color: #664422;
+  cursor: not-allowed;
+}
+
+.run-btn:hover:not(:disabled) {
+  background-color: #ff8800;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.editor-pane {
+  flex: 1;
+  border-right: 1px solid #444;
+}
+
+.output-pane {
+  flex: 1;
+  background-color: #121212; /* Terminal black */
+  padding: 20px;
+  overflow: auto;
+}
+
+.output-pane pre {
+  margin: 0;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 16px;
+  color: #00ff00; /* Matrix green */
+  white-space: pre-wrap;
+}

@@ -1,0 +1,5 @@
+bhai a = 10
+bhai b = 20
+agar b > a tab
+    bola "B is bigger"
+bas kar

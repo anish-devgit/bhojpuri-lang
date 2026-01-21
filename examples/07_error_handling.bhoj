@@ -1,0 +1,3 @@
+# Syntax error demo (commented out)
+# bola 10 / 0
+bola "Safe code"

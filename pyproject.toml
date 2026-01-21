@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bhojpurilang"
+version = "0.1.0"
+description = "A toy programming language for the Bhojpuri-speaking world"
+authors = [{name = "Antigravity", email = "antigravity@gemini.google"}]
+dependencies = [
+    "lark>=1.1.0",
+    "click>=8.0.0",
+]
+requires-python = ">=3.10"
+
+[project.scripts]
+bhoj = "bhoj.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

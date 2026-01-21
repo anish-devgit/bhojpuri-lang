@@ -1,0 +1,47 @@
+start: stmt+
+
+?stmt: print_stmt
+     | assign_stmt
+     | if_stmt
+     | while_stmt
+
+print_stmt: "bola" expr
+assign_stmt: "bhai" NAME "=" expr
+if_stmt: "agar" expr "tab" block ("nahi" "ta" block)? "bas" "kar"
+while_stmt: "jab" "tak" expr "tab" block "bas" "kar"
+
+block: stmt+
+
+?expr: comparison
+
+?comparison: term (comp_op term)*
+!comp_op: "bada" "bate" -> gt
+        | "barabar" "ba" -> eq
+        | ">=" -> ge
+        | "<=" -> le
+        | "!=" -> ne
+        | ">" -> gt
+        | "<" -> lt
+        | "==" -> eq
+
+?term: product (add_op product)*
+!add_op: "+" -> add
+       | "-" -> sub
+
+?product: atom (mul_op atom)*
+!mul_op: "*" -> mul
+       | "/" -> div
+
+?atom: NUMBER -> number
+     | NAME -> var
+     | STRING -> string
+     | "sahi" "ba" -> true_val
+     | "galat" "ba" -> false_val
+     | "(" expr ")"
+
+%import common.CNAME -> NAME
+%import common.NUMBER
+%import common.ESCAPED_STRING -> STRING
+%import common.WS
+%ignore WS
+%ignore /#.*/

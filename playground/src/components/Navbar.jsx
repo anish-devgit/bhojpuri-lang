@@ -78,7 +78,7 @@ const Navbar = () => {
                     {/* Right Actions */}
                     <div className="hidden md:flex items-center gap-4 relative z-10">
                             <a
-                            href="https://github.com/anish-devgit/bhojpurilang"
+                            href="https://github.com/anish-devgit/bhojpuri-lang"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/5 text-white text-xs font-bold uppercase tracking-wider transition-all hover:scale-105"
@@ -125,7 +125,7 @@ const Navbar = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
-                                href="https://github.com/anish-devgit/bhojpurilang"
+                                href="https://github.com/anish-devgit/bhojpuri-lang"
                                 className="mt-8 flex items-center gap-2 justify-center px-6 py-3 rounded-xl bg-[#646cff] text-white font-medium"
                             >
                                 <FaGithub size={20} /> Star on GitHub

@@ -13,7 +13,23 @@ import Navbar from './components/Navbar';
 import Documentation from './components/Documentation';
 
 function App() {
-  const [code, setCode] = useState('bola "Namaste Anish Raj! BhojpuriLang mein raua swagat ba!"')
+  const [code, setCode] = useState(`bola "Namaste Anish Raj! BhojpuriLang mein raua swagat ba!"
+
+bhai a = 10
+bhai b = 20
+
+agar a < b tab
+    bola "a chota ba b se"
+nahi ta
+    bola "a bada ba b se"
+bas kar
+
+bola "Ginti shuru karat bani:"
+bhai i = 1
+jab tak i < 6 tab
+    bola i
+    bhai i = i + 1
+bas kar`)
   const [output, setOutput] = useState('Initializing Runtime...')
   const [pyodide, setPyodide] = useState(null)
   const [isRunning, setIsRunning] = useState(false)

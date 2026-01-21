@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Editor from '@monaco-editor/react'
 import { motion } from 'framer-motion'
 import { Play, Trash2 } from 'lucide-react'
-import confetti from 'canvas-confetti'
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -91,12 +91,7 @@ def run_bhojpuri(code):
             setOutput(result)
             
             if (!result.includes('Error')) {
-                confetti({
-                    particleCount: 100,
-                    spread: 70,
-                    origin: { y: 0.6 },
-                    colors: ['#FF9933', '#ffffff', '#138808'] // India/Bhojpuri Colors
-                });
+                // Success - simplified (no confetti)
             }
         } catch (err) {
             setOutput("Runtime Error: " + err.message)
